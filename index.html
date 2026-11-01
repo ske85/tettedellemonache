@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tette delle Monache — Lavori in corso</title>
+<meta name="description" content="Il sito delle Tette delle Monache, il dolce tipico di Altamura, è in preparazione. Lascia la tua email per ricevere informazioni.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f5efe4;
+    --cream-2:#ebe1cf;
+    --custard:#e9c97e;
+    --crust:#c8994b;
+    --coffee:#2a1c13;
+    --coffee-2:#4a3424;
+    --ink:#2a1c13;
+    --muted:#7a6553;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 35%, #fbf7f0 0%, var(--cream) 55%, var(--cream-2) 100%) fixed;
+    background-color:var(--cream-2);
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;
+    overflow-x:hidden;
+  }
+  /* zucchero a velo che cade */
+  .sugar{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .sugar i{
+    position:absolute;top:-10px;width:4px;height:4px;border-radius:50%;
+    background:#fff;opacity:.9;box-shadow:0 0 3px rgba(255,255,255,.9);
+    animation:fall linear infinite;
+  }
+  @keyframes fall{
+    to{transform:translate3d(var(--drift,20px),105vh,0)}
+  }
+
+  main{
+    position:relative;z-index:1;
+    width:100%;max-width:560px;
+    padding:48px 24px 32px;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    flex:1;
+  }
+  .eyebrow{
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  .mountain{width:min(360px,82vw);height:auto;margin:22px 0 6px;overflow:visible}
+  .mountain .peak{animation:breathe 6s ease-in-out infinite;transform-origin:200px 270px}
+  @keyframes breathe{50%{transform:scale(1.012)}}
+
+  h1{
+    font-family:"Fraunces",Georgia,serif;font-weight:600;
+    font-size:clamp(2.1rem,7vw,3.1rem);line-height:1.02;letter-spacing:-.02em;
+    margin-top:18px;
+  }
+  h1 em{font-style:italic;font-weight:400;color:var(--crust)}
+  .lead{
+    margin-top:14px;font-size:1.05rem;line-height:1.55;color:var(--coffee-2);
+    max-width:30em;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;margin-top:20px;
+    font-size:.82rem;font-weight:500;color:var(--coffee-2);
+    background:rgba(255,255,255,.6);border:1px solid rgba(42,28,19,.12);
+    padding:6px 14px;border-radius:999px;
+  }
+  .badge::before{
+    content:"";width:8px;height:8px;border-radius:50%;background:var(--crust);
+    animation:pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{50%{opacity:.3}}
+
+  form{
+    width:100%;margin-top:30px;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(42,28,19,.1);
+    border-radius:18px;padding:22px;
+    box-shadow:0 10px 30px -18px rgba(42,28,19,.45);
+    text-align:left;
+    backdrop-filter:blur(4px);
+  }
+  form h2{
+    font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.25rem;
+  }
+  form p.sub{font-size:.92rem;color:var(--muted);margin-top:4px}
+  .row{display:flex;gap:10px;margin-top:16px}
+  input[type=email]{
+    flex:1;min-width:0;
+    font:inherit;font-size:1rem;color:var(--ink);
+    padding:13px 15px;border-radius:12px;
+    border:1.5px solid rgba(42,28,19,.18);background:#fff;
+    transition:border-color .2s, box-shadow .2s;
+  }
+  input[type=email]:focus{
+    outline:none;border-color:var(--crust);box-shadow:0 0 0 4px rgba(200,153,75,.18);
+  }
+  button{
+    font:inherit;font-weight:600;font-size:.98rem;
+    padding:13px 20px;border-radius:12px;border:0;cursor:pointer;
+    background:var(--coffee);color:#fbf5ea;white-space:nowrap;
+    transition:transform .15s, background .2s;
+  }
+  button:hover{background:#3b281b}
+  button:active{transform:translateY(1px)}
+  button[disabled]{opacity:.6;cursor:wait}
+  .consent{
+    display:flex;gap:10px;align-items:flex-start;margin-top:14px;
+    font-size:.84rem;line-height:1.45;color:var(--coffee-2);
+  }
+  .consent input{margin-top:3px;accent-color:var(--coffee);width:16px;height:16px;flex:none}
+  details{margin-top:10px;font-size:.8rem;color:var(--muted);line-height:1.5}
+  details summary{cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+  details div{margin-top:8px}
+  details a{color:var(--coffee-2)}
+  .hp{position:absolute;left:-9999px}
+  .msg{margin-top:12px;font-size:.92rem;font-weight:500;min-height:1.2em}
+  .msg.ok{color:#3d6b2f}
+  .msg.err{color:#a3392b}
+
+  footer{
+    position:relative;z-index:1;
+    padding:20px 24px 28px;font-size:.8rem;color:var(--muted);text-align:center;
+  }
+  @media (max-width:440px){
+    .row{flex-direction:column}
+    button{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sugar,.mountain .peak,.badge::before{animation:none!important}
+    .sugar{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="sugar" aria-hidden="true"></div>
+
+<main>
+  <span class="eyebrow">Dolce tipico di Altamura</span>
+
+  <!-- La montagna: forma del dolce, cima di zucchero a velo, base di chicchi di caffè -->
+  <svg class="mountain" viewBox="0 0 400 320" role="img" aria-label="Una montagna stilizzata a forma di tetta delle monache, con la cima innevata di zucchero a velo">
+    <defs>
+      <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f6e3b0"/>
+        <stop offset=".55" stop-color="#e9c97e"/>
+        <stop offset="1" stop-color="#d9ad5c"/>
+      </linearGradient>
+      <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#000" stop-opacity="0"/>
+        <stop offset=".6" stop-color="#000" stop-opacity="0"/>
+        <stop offset="1" stop-color="#7a4f1c" stop-opacity=".28"/>
+      </linearGradient>
+      <linearGradient id="snow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset="1" stop-color="#ece8e2"/>
+      </linearGradient>
+      <clipPath id="dome">
+        <path d="M58,268 C52,198 108,112 184,64 C191,54 195,40 200,28 C205,40 209,54 216,64 C292,112 348,198 342,268 Z"/>
+      </clipPath>
+      <pattern id="dust" width="9" height="9" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="3" r=".9" fill="#fff" opacity=".8"/>
+        <circle cx="7" cy="7" r=".6" fill="#fff" opacity=".6"/>
+      </pattern>
+    </defs>
+
+    <!-- ombra a terra -->
+    <ellipse cx="200" cy="276" rx="170" ry="14" fill="#2a1c13" opacity=".18"/>
+
+    <g class="peak">
+      <!-- base più chiara (il disco di pan di Spagna) -->
+      <path d="M62,262 Q60,284 90,286 L310,286 Q340,284 338,262 Z" fill="#e2bd72"/>
+      <path d="M62,262 Q60,284 90,286 L310,286 Q340,284 338,262 Z" fill="url(#shade)"/>
+
+      <g clip-path="url(#dome)">
+        <rect x="0" y="0" width="400" height="300" fill="url(#body)"/>
+        <rect x="0" y="0" width="400" height="300" fill="url(#shade)"/>
+        <!-- pori della pasta -->
+        <g fill="#c8994b" opacity=".35">
+          <circle cx="120" cy="230" r="2"/><circle cx="160" cy="250" r="1.5"/>
+          <circle cx="245" cy="238" r="2.2"/><circle cx="290" cy="220" r="1.6"/>
+          <circle cx="205" cy="215" r="1.4"/><circle cx="95" cy="250" r="1.6"/>
+          <circle cx="315" cy="252" r="1.8"/><circle cx="175" cy="205" r="1.2"/>
+        </g>
+        <!-- cappa di zucchero a velo, con i bordi che colano -->
+        <path id="cap" fill="url(#snow)" d="
+          M0,0 H400 V168
+          C388,170 378,160 362,166
+          C350,172 348,190 336,190
+          C322,190 324,170 306,170
+          C290,170 286,186 270,184
+          C256,182 258,164 240,164
+          C226,164 224,196 208,196
+          C194,196 196,170 180,168
+          C164,166 160,184 146,184
+          C130,184 134,162 116,162
+          C100,162 98,182 84,180
+          C70,178 72,160 56,160
+          C40,160 20,170 0,166 Z"/>
+        <clipPath id="capclip"><use href="#cap"/></clipPath>
+        <rect x="0" y="0" width="400" height="200" fill="url(#dust)" clip-path="url(#capclip)"/>
+        <!-- ombra sul fianco destro della neve -->
+        <path d="M216,64 C292,112 348,198 342,268 L400,268 L400,0 L200,0 Z" fill="#8a7a66" opacity=".08"/>
+        <!-- riflesso -->
+        <path d="M150,100 C130,120 112,150 104,176" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7"/>
+      </g>
+    </g>
+
+    <!-- chicchi di caffè -->
+    <g fill="#2a1c13">
+      <g transform="translate(22,290) rotate(-20)"><ellipse rx="13" ry="9"/><path d="M-11,0 Q0,-3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(52,300) rotate(15)"><ellipse rx="13" ry="9"/><path d="M-11,0 Q0,3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(88,302) rotate(-8)"><ellipse rx="13" ry="9" fill="#3a271a"/><path d="M-11,0 Q0,-3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(126,304) rotate(25)"><ellipse rx="13" ry="9"/><path d="M-11,0 Q0,3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(164,305) rotate(-15)"><ellipse rx="13" ry="9" fill="#3a271a"/><path d="M-11,0 Q0,-3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(202,306) rotate(5)"><ellipse rx="13" ry="9"/><path d="M-11,0 Q0,3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(240,305) rotate(-25)"><ellipse rx="13" ry="9" fill="#3a271a"/><path d="M-11,0 Q0,-3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(278,304) rotate(12)"><ellipse rx="13" ry="9"/><path d="M-11,0 Q0,3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(314,302) rotate(-10)"><ellipse rx="13" ry="9" fill="#3a271a"/><path d="M-11,0 Q0,-3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(348,300) rotate(22)"><ellipse rx="13" ry="9"/><path d="M-11,0 Q0,3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+      <g transform="translate(378,290) rotate(-18)"><ellipse rx="13" ry="9" fill="#3a271a"/><path d="M-11,0 Q0,-3 11,0" stroke="#5a3d28" stroke-width="1.6" fill="none"/></g>
+    </g>
+  </svg>
+
+  <h1>Tette delle Monache<br><em>stiamo arrivando</em></h1>
+  <p class="lead">Il sito è in preparazione: tra poco qui troverai il dolce di Altamura, soffice, ripieno di crema e coperto di zucchero a velo.</p>
+  <span class="badge">Lavori in corso</span>
+
+  <form id="info" novalidate>
+    <h2>Richiedi informazioni</h2>
+    <p class="sub">Lascia la tua email: ti scriviamo noi per ordini, prezzi e novità.</p>
+
+    <input type="hidden" name="access_key" value="26d66e78-3656-435e-8239-92d68a273e2b">
+    <input type="hidden" name="subject" value="Nuova richiesta informazioni da tettedellemonache.com">
+    <input type="hidden" name="from_name" value="tettedellemonache.com">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+    <div class="row">
+      <label for="email" class="hp">Email</label>
+      <input id="email" type="email" name="email" placeholder="la-tua@email.it" autocomplete="email" required>
+      <button type="submit" id="send">Invia</button>
+    </div>
+
+    <label class="consent">
+      <input type="checkbox" name="consenso_privacy" value="sì" required>
+      <span>Acconsento al trattamento della mia email per ricevere una risposta alla richiesta di informazioni.</span>
+    </label>
+
+    <details>
+      <summary>Informativa privacy</summary>
+      <div>
+        <strong>Titolare del trattamento:</strong> Domenico Fraccalvieri, email: <a href="mailto:tettedellemonache@outlook.com">tettedellemonache@outlook.com</a>.<br>
+        <strong>Dati raccolti:</strong> solo l'indirizzo email che inserisci.<br>
+        <strong>Finalità:</strong> rispondere alla tua richiesta di informazioni. Base giuridica: il tuo consenso (art. 6.1.a GDPR).<br>
+        <strong>Conservazione:</strong> per il tempo necessario a rispondere e comunque non oltre 12 mesi.<br>
+        <strong>Destinatari:</strong> il modulo è gestito da Web3Forms, che inoltra il messaggio via email al titolare.<br>
+        <strong>I tuoi diritti:</strong> puoi chiedere in ogni momento accesso, rettifica, cancellazione o revoca del consenso scrivendo all'email del titolare, e puoi presentare reclamo al Garante per la protezione dei dati personali.
+      </div>
+    </details>
+
+    <p class="msg" id="msg" role="status" aria-live="polite"></p>
+  </form>
+</main>
+
+<footer>© <span id="y"></span> tettedellemonache.com</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // zucchero a velo
+  (function(){
+    var box = document.querySelector('.sugar');
+    var n = window.innerWidth < 600 ? 28 : 55;
+    for (var i = 0; i < n; i++){
+      var s = document.createElement('i');
+      var size = (Math.random()*3 + 2).toFixed(1);
+      s.style.left = (Math.random()*100) + 'vw';
+      s.style.width = s.style.height = size + 'px';
+      s.style.opacity = (Math.random()*.5 + .45).toFixed(2);
+      s.style.animationDuration = (Math.random()*10 + 9).toFixed(1) + 's';
+      s.style.animationDelay = (-Math.random()*18).toFixed(1) + 's';
+      s.style.setProperty('--drift', (Math.random()*60 - 30).toFixed(0) + 'px');
+      box.appendChild(s);
+    }
+  })();
+
+  // invio modulo
+  (function(){
+    var form = document.getElementById('info');
+    var msg = document.getElementById('msg');
+    var btn = document.getElementById('send');
+
+    function say(text, cls){ msg.textContent = text; msg.className = 'msg ' + (cls||''); }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = form.email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('Inserisci un indirizzo email valido.', 'err'); form.email.focus(); return; }
+      if (!form.consenso_privacy.checked) { say('Per inviare la richiesta serve il consenso al trattamento della email.', 'err'); return; }
+      if (form.access_key.value.indexOf('INSERISCI') === 0) { say('Il modulo non è ancora collegato: manca la access key di Web3Forms.', 'err'); return; }
+
+      btn.disabled = true; say('Invio in corso…');
+      fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } })
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if (d.success) { form.reset(); say('Grazie! Ti scriveremo presto.', 'ok'); }
+          else { say('Qualcosa non ha funzionato. Riprova tra poco.', 'err'); }
+        })
+        .catch(function(){ say('Connessione non riuscita. Riprova tra poco.', 'err'); })
+        .finally(function(){ btn.disabled = false; });
+    });
+  })();
+</script>
+</body>
+</html>
