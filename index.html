@@ -92,15 +92,20 @@
     font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.25rem;
   }
   form p.sub{font-size:.92rem;color:var(--muted);margin-top:4px}
-  .row{display:flex;gap:10px;margin-top:16px}
-  input[type=email]{
-    flex:1;min-width:0;
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .field{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .field.wide{grid-column:1/-1}
+  .field label{font-size:.82rem;font-weight:600;color:var(--coffee-2)}
+  .field .opt{font-weight:400;color:var(--muted)}
+  .submit{width:100%;margin-top:16px}
+  input[type=email],input[type=text],input[type=tel]{
+    width:100%;min-width:0;
     font:inherit;font-size:1rem;color:var(--ink);
     padding:13px 15px;border-radius:12px;
     border:1.5px solid rgba(42,28,19,.18);background:#fff;
     transition:border-color .2s, box-shadow .2s;
   }
-  input[type=email]:focus{
+  input[type=email]:focus,input[type=text]:focus,input[type=tel]:focus{
     outline:none;border-color:var(--crust);box-shadow:0 0 0 4px rgba(200,153,75,.18);
   }
   button{
@@ -131,8 +136,7 @@
     padding:20px 24px 28px;font-size:.8rem;color:var(--muted);text-align:center;
   }
   @media (max-width:440px){
-    .row{flex-direction:column}
-    button{width:100%}
+    .fields{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){
     .sugar,.mountain .peak,.badge::before{animation:none!important}
@@ -237,29 +241,40 @@
 
   <form id="info" novalidate>
     <h2>Richiedi informazioni</h2>
-    <p class="sub">Lascia la tua email: ti scriviamo noi per ordini, prezzi e novità.</p>
+    <p class="sub">Lascia i tuoi contatti: ti rispondiamo noi per ordini, prezzi e novità.</p>
 
     <input type="hidden" name="access_key" value="9b6ca46b-5a80-4201-93fc-f913180a5747">
     <input type="hidden" name="subject" value="Nuova richiesta informazioni da tettedellemonache.co">
     <input type="hidden" name="from_name" value="tettedellemonache.co">
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 
-    <div class="row">
-      <label for="email" class="hp">Email</label>
-      <input id="email" type="email" name="email" placeholder="la-tua@email.it" autocomplete="email" required>
-      <button type="submit" id="send">Invia</button>
+    <div class="fields">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input id="name" type="text" name="name" placeholder="Nome e cognome" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="phone">Telefono <span class="opt">(facoltativo)</span></label>
+        <input id="phone" type="tel" name="telefono" placeholder="333 123 4567" autocomplete="tel" inputmode="tel">
+      </div>
+      <div class="field wide">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="la-tua@email.it" autocomplete="email" required>
+      </div>
     </div>
 
     <label class="consent">
       <input type="checkbox" name="consenso_privacy" value="sì" required>
-      <span>Acconsento al trattamento della mia email per ricevere una risposta alla richiesta di informazioni.</span>
+      <span>Acconsento al trattamento dei miei dati per ricevere una risposta alla richiesta di informazioni.</span>
     </label>
+
+    <button type="submit" id="send" class="submit">Invia richiesta</button>
 
     <details>
       <summary>Informativa privacy</summary>
       <div>
         <strong>Titolare del trattamento:</strong> Domenico Fraccalvieri, email: <a href="mailto:tettedellemonache@outlook.com">tettedellemonache@outlook.com</a>.<br>
-        <strong>Dati raccolti:</strong> solo l'indirizzo email che inserisci.<br>
+        <strong>Dati raccolti:</strong> nome, indirizzo email e, se lo inserisci, numero di telefono.<br>
         <strong>Finalità:</strong> rispondere alla tua richiesta di informazioni. Base giuridica: il tuo consenso (art. 6.1.a GDPR).<br>
         <strong>Conservazione:</strong> per il tempo necessario a rispondere e comunque non oltre 12 mesi.<br>
         <strong>Destinatari:</strong> il modulo è gestito da Web3Forms, che inoltra il messaggio via email al titolare.<br>
@@ -303,9 +318,14 @@
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
+      var nameEl = document.getElementById('name');
+      var name = nameEl.value.trim();
+      var phone = form.telefono.value.trim();
       var email = form.email.value.trim();
+      if (name.length < 2) { say('Inserisci il tuo nome.', 'err'); nameEl.focus(); return; }
+      if (phone && !/^\+?[0-9\s.\-\/()]{6,20}$/.test(phone)) { say('Il numero di telefono non sembra valido.', 'err'); form.telefono.focus(); return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('Inserisci un indirizzo email valido.', 'err'); form.email.focus(); return; }
-      if (!form.consenso_privacy.checked) { say('Per inviare la richiesta serve il consenso al trattamento della email.', 'err'); return; }
+      if (!form.consenso_privacy.checked) { say('Per inviare la richiesta serve il consenso al trattamento dei dati.', 'err'); return; }
       if (form.access_key.value.indexOf('INSERISCI') === 0) { say('Il modulo non è ancora collegato: manca la access key di Web3Forms.', 'err'); return; }
 
       btn.disabled = true; say('Invio in corso…');
