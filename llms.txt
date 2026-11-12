@@ -1,17 +1,24 @@
 # Tette delle Monache
 
-> Sito dedicato alle tette delle monache, il dolce tipico di Altamura (Puglia): pan di Spagna soffice a forma di cupola, ripieno di crema pasticcera e coperto di zucchero a velo. Il sito è in preparazione; per ora è attiva una pagina con un modulo per richiedere informazioni lasciando la propria email.
+> Sito dedicato alle tette delle monache, il dolce tipico di Altamura (Puglia): pan di Spagna soffice a forma di cupola, ripieno di crema pasticcera e coperto di zucchero a velo. Il sito è in preparazione; per ora sono attive una pagina con un modulo per richiedere informazioni e una pagina sulla storia del dolce. Il progetto è noto anche come "Dune di Altamura".
 
 Informazioni utili:
 
+- Altri nomi del dolce: tette della monaca, sospiri, sospiri pugliesi, sospiri di Altamura, sise delle monache (variante abruzzese di Guardiagrele), seni delle monache.
+- La tradizione lega il dolce alle monache Clarisse e al monastero di Santa Chiara nel centro storico di Altamura.
 - Il sito è in fase di costruzione: prezzi, ordini e spedizioni non sono ancora pubblicati.
-- Per informazioni su ordini, prezzi e novità si può lasciare la propria email nel modulo della home page, oppure scrivere a tettedellemonache@outlook.com.
+- Per informazioni su ordini, prezzi e novità si possono lasciare nome, email e telefono nel modulo della home page, oppure scrivere a tettedellemonache@outlook.com.
 - Lingua del sito: italiano.
 
 ## Pagine
 
 - [Home page](https://tettedellemonache.co/): pagina "lavori in corso" con il modulo di richiesta informazioni
+- [Storia](https://tettedellemonache.co/storia/): cosa sono le tette delle monache, origine, altri nomi, dolci simili e domande frequenti
 
 ## Contatti
 
 - [Email](mailto:tettedellemonache@outlook.com): tettedellemonache@outlook.com
+
+## Altri domini
+
+- dunedialtamura.com, dunedialtamura.it e tettedellemonache.info rimandano a questo sito.
