@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tette delle Monache di Altamura (sospiri) — Lavori in corso</title>
-<meta name="description" content="Tette delle monache, i sospiri tipici di Altamura: soffici, ripieni di crema e coperti di zucchero a velo. Il sito è in preparazione, lascia i tuoi contatti per ricevere informazioni.">
+<meta name="description" content="Tette delle monache, i sospiri tipici di Altamura: soffici, ripieni di crema e coperti di zucchero a velo. Il sito è in preparazione: scopri intanto la storia del dolce.">
 <meta name="keywords" content="tette delle monache, tette della monaca, tette delle monache Altamura, sospiri, sospiri pugliesi, sospiri di Altamura, sise delle monache, dolce tipico Altamura, dolci pugliesi, Dune di Altamura, tette monache, tete delle monache, tette delle monach, sospir">
 <link rel="canonical" href="https://tettedellemonache.co/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Tette delle Monache">
 <meta property="og:title" content="Tette delle Monache — il dolce tipico di Altamura">
-<meta property="og:description" content="Soffici, cremose, innevate di zucchero a velo. Il sito è in preparazione: lascia i tuoi contatti per ricevere informazioni.">
+<meta property="og:description" content="Soffici, cremose, innevate di zucchero a velo. Il sito è in preparazione: scopri intanto la storia del dolce di Altamura.">
 <meta property="og:url" content="https://tettedellemonache.co/">
 <meta property="og:image" content="https://tettedellemonache.co/og.png">
 <meta property="og:image:width" content="1200">
@@ -176,6 +176,12 @@
   .msg.ok{color:#3d6b2f}
   .msg.err{color:#a3392b}
 
+  .soon{width:100%;margin-top:30px;background:rgba(255,255,255,.72);border:1px solid rgba(42,28,19,.1);border-radius:18px;padding:24px 22px;box-shadow:0 10px 30px -18px rgba(42,28,19,.45);text-align:center}
+  .soon h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.3rem}
+  .soon .sub{font-size:.95rem;color:var(--muted);margin-top:6px;line-height:1.5}
+  .soon-link{display:inline-block;margin-top:16px;font-weight:600;color:#fbf5ea;background:var(--coffee);padding:12px 20px;border-radius:12px;text-decoration:none}
+  .soon-link:hover{background:#3b281b}
+  .lead a{color:var(--coffee);text-decoration-color:var(--crust);text-underline-offset:3px;text-decoration-thickness:2px}
   footer a{color:var(--muted)}
   footer{
     position:relative;z-index:1;
@@ -285,71 +291,14 @@
   <p class="lead">Il sito è in preparazione: tra poco qui troverai il dolce di Altamura, soffice, ripieno di crema e coperto di zucchero a velo, che in Puglia molti chiamano anche <em>sospiri</em>. Intanto scopri <a href="/storia/">la storia delle tette delle monache</a>.</p>
   <span class="badge">Lavori in corso</span>
 
-  <form id="info" novalidate>
-    <span class="b2b">Riservato a commercianti e distributori</span>
-    <h2>Richiedi informazioni</h2>
-    <p class="sub">Hai un negozio, un bar, una pasticceria o distribuisci prodotti alimentari? Lascia i contatti della tua attività: ti scriviamo noi per condizioni commerciali, forniture e novità.</p>
-
-    <input type="hidden" name="access_key" value="9b6ca46b-5a80-4201-93fc-f913180a5747">
-    <input type="hidden" name="subject" value="Nuova richiesta B2B da tettedellemonache.co">
-    <input type="hidden" name="from_name" value="tettedellemonache.co">
-    <div class="hp" aria-hidden="true">
-      <label>Non spuntare questa casella <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
-    </div>
-
-    <div class="fields">
-      <div class="field">
-        <label for="name">Nome e cognome</label>
-        <input id="name" type="text" name="name" placeholder="Mario Rossi" autocomplete="name" required>
-      </div>
-      <div class="field">
-        <label for="company">Azienda</label>
-        <input id="company" type="text" name="azienda" placeholder="Ragione sociale o insegna" autocomplete="organization" required>
-      </div>
-      <div class="field">
-        <label for="kind">Tipo di attività</label>
-        <select id="kind" name="tipo_attivita" required>
-          <option value="">Seleziona…</option>
-          <option>Negozio / gastronomia</option>
-          <option>Bar / pasticceria</option>
-          <option>Ristorante / catering / hotel</option>
-          <option>Distributore / grossista</option>
-          <option>Grande distribuzione</option>
-          <option>Altro</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="vat">Partita IVA <span class="opt">(facoltativa)</span></label>
-        <input id="vat" type="text" name="partita_iva" placeholder="IT01234567890" inputmode="text" autocomplete="off">
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="ufficio@azienda.it" autocomplete="email" required>
-      </div>
-      <div class="field">
-        <label for="phone">Telefono <span class="opt">(facoltativo)</span></label>
-        <input id="phone" type="tel" name="telefono" placeholder="080 123 4567" autocomplete="tel" inputmode="tel">
-      </div>
-    </div>
-
-    <label class="consent">
-      <input type="checkbox" name="dichiarazione_operatore" value="sì" required>
-      <span>Dichiaro di scrivere per conto di un'attività commerciale e non come consumatore privato.</span>
-    </label>
-    <label class="consent">
-      <input type="checkbox" name="presa_visione_privacy" value="sì" required>
-      <span>Ho letto l'<a href="/privacy/" target="_blank" rel="noopener">informativa privacy</a>.</span>
-    </label>
-
-    <button type="submit" id="send" class="submit">Invia richiesta</button>
-
-    <p class="note">Non vendiamo direttamente ai privati: le richieste dei consumatori finali non riceveranno risposta.</p>
-
-    <p class="msg" id="msg" role="status" aria-live="polite"></p>
-  </form>
+  <section class="soon" aria-labelledby="soon-title">
+    <h2 id="soon-title">Presto anche i contatti</h2>
+    <p class="sub">Stiamo completando gli ultimi dettagli. A breve qui troverai tutte le informazioni per commercianti e distributori.</p>
+    <a class="soon-link" href="/storia/">Scopri la storia delle tette delle monache →</a>
+  </section>
 </main>
 
-<footer>© <span id="y"></span> tettedellemonache.co · Informazioni riservate a operatori professionali · <a href="/privacy/">Privacy e cookie</a></footer>
+<footer>© <span id="y"></span> tettedellemonache.co · <a href="/privacy/">Privacy e cookie</a></footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
@@ -371,45 +320,6 @@
     }
   })();
 
-  // invio modulo
-  (function(){
-    var form = document.getElementById('info');
-    var msg = document.getElementById('msg');
-    var btn = document.getElementById('send');
-
-    function say(text, cls){ msg.textContent = text; msg.className = 'msg ' + (cls||''); }
-
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var nameEl = document.getElementById('name');
-      var compEl = document.getElementById('company');
-      var kindEl = document.getElementById('kind');
-      var vatEl = document.getElementById('vat');
-      var name = nameEl.value.trim();
-      var phone = form.telefono.value.trim();
-      var email = form.email.value.trim();
-      var vat = vatEl.value.replace(/\s/g,'').toUpperCase();
-      if (name.length < 2) { say('Inserisci nome e cognome.', 'err'); nameEl.focus(); return; }
-      if (compEl.value.trim().length < 2) { say('Inserisci il nome dell\'azienda.', 'err'); compEl.focus(); return; }
-      if (!kindEl.value) { say('Seleziona il tipo di attività.', 'err'); kindEl.focus(); return; }
-      if (vat && !/^(IT)?[0-9]{11}$/.test(vat) && !/^[A-Z]{2}[0-9A-Z]{2,13}$/.test(vat)) { say('La partita IVA non sembra valida.', 'err'); vatEl.focus(); return; }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('Inserisci un indirizzo email valido.', 'err'); form.email.focus(); return; }
-      if (phone && !/^\+?[0-9\s.\-\/()]{6,20}$/.test(phone)) { say('Il numero di telefono non sembra valido.', 'err'); form.telefono.focus(); return; }
-      if (!form.dichiarazione_operatore.checked) { say('Il modulo è riservato alle attività commerciali: conferma la dichiarazione.', 'err'); return; }
-      if (!form.presa_visione_privacy.checked) { say('Conferma di aver letto l\'informativa privacy.', 'err'); return; }
-      if (form.access_key.value.indexOf('INSERISCI') === 0) { say('Il modulo non è ancora collegato: manca la access key di Web3Forms.', 'err'); return; }
-
-      btn.disabled = true; say('Invio in corso…');
-      fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } })
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          if (d.success) { form.reset(); say('Grazie! Ti scriveremo presto.', 'ok'); }
-          else { say('Qualcosa non ha funzionato. Riprova tra poco.', 'err'); }
-        })
-        .catch(function(){ say('Connessione non riuscita. Riprova tra poco.', 'err'); })
-        .finally(function(){ btn.disabled = false; });
-    });
-  })();
 </script>
 </body>
 </html>

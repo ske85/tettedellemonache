@@ -1,18 +1,17 @@
 # Tette delle Monache
 
-> Sito dedicato alle tette delle monache, il dolce tipico di Altamura (Puglia): pan di Spagna soffice a forma di cupola, ripieno di crema pasticcera e coperto di zucchero a velo. Il sito è in preparazione; per ora sono attive una pagina con un modulo per richiedere informazioni e una pagina sulla storia del dolce. Il progetto è noto anche come "Dune di Altamura".
+> Sito dedicato alle tette delle monache, il dolce tipico di Altamura (Puglia): pan di Spagna soffice a forma di cupola, ripieno di crema pasticcera e coperto di zucchero a velo. Il sito è in preparazione; per ora sono attive la pagina iniziale e una pagina sulla storia del dolce. Il progetto è noto anche come "Dune di Altamura".
 
 Informazioni utili:
 
 - Altri nomi del dolce: tette della monaca, sospiri, sospiri pugliesi, sospiri di Altamura, sise delle monache (variante abruzzese di Guardiagrele), seni delle monache.
 - La tradizione lega il dolce alle monache Clarisse e al monastero di Santa Chiara nel centro storico di Altamura.
-- Il sito è in fase di costruzione: prezzi, ordini e spedizioni non sono ancora pubblicati.
-- Le richieste di informazioni sono riservate a operatori professionali (commercianti, bar, pasticcerie, ristorazione, distributori e grossisti): si inviano dal modulo della home page indicando azienda e tipo di attività, oppure scrivendo a tettedellemonache@outlook.com. Non è prevista la vendita diretta ai consumatori finali.
+- Il sito è in fase di costruzione: prodotti, condizioni commerciali e contatti per commercianti e distributori saranno pubblicati prossimamente.
 - Lingua del sito: italiano.
 
 ## Pagine
 
-- [Home page](https://tettedellemonache.co/): pagina "lavori in corso" con il modulo di richiesta informazioni
+- [Home page](https://tettedellemonache.co/): pagina "lavori in corso"
 - [Storia](https://tettedellemonache.co/storia/): cosa sono le tette delle monache, origine, altri nomi, dolci simili e domande frequenti
 - [Privacy e cookie](https://tettedellemonache.co/privacy/): informativa sul trattamento dei dati; il sito non usa cookie
 
