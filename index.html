@@ -44,9 +44,11 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
   :root{
     --cream:#f5efe4;
@@ -137,14 +139,14 @@
   .field label{font-size:.82rem;font-weight:600;color:var(--coffee-2)}
   .field .opt{font-weight:400;color:var(--muted)}
   .submit{width:100%;margin-top:16px}
-  input[type=email],input[type=text],input[type=tel]{
+  input[type=email],input[type=text],input[type=tel],select{
     width:100%;min-width:0;
     font:inherit;font-size:1rem;color:var(--ink);
     padding:13px 15px;border-radius:12px;
     border:1.5px solid rgba(42,28,19,.18);background:#fff;
     transition:border-color .2s, box-shadow .2s;
   }
-  input[type=email]:focus,input[type=text]:focus,input[type=tel]:focus{
+  input[type=email]:focus,input[type=text]:focus,input[type=tel]:focus,select:focus{
     outline:none;border-color:var(--crust);box-shadow:0 0 0 4px rgba(200,153,75,.18);
   }
   button{
@@ -161,6 +163,10 @@
     font-size:.84rem;line-height:1.45;color:var(--coffee-2);
   }
   .consent input{margin-top:3px;accent-color:var(--coffee);width:16px;height:16px;flex:none}
+  select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a3424' stroke-width='1.6' fill='none'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:36px}
+  .b2b{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#fbf5ea;background:var(--coffee);padding:5px 10px;border-radius:999px;margin-bottom:10px}
+  .consent a{color:var(--coffee)}
+  .note{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.45}
   details{margin-top:10px;font-size:.8rem;color:var(--muted);line-height:1.5}
   details summary{cursor:pointer;text-decoration:underline;text-underline-offset:2px}
   details div{margin-top:8px}
@@ -170,6 +176,7 @@
   .msg.ok{color:#3d6b2f}
   .msg.err{color:#a3392b}
 
+  footer a{color:var(--muted)}
   footer{
     position:relative;z-index:1;
     padding:20px 24px 28px;font-size:.8rem;color:var(--muted);text-align:center;
@@ -279,11 +286,12 @@
   <span class="badge">Lavori in corso</span>
 
   <form id="info" novalidate>
+    <span class="b2b">Riservato a commercianti e distributori</span>
     <h2>Richiedi informazioni</h2>
-    <p class="sub">Lascia i tuoi contatti: ti rispondiamo noi per ordini, prezzi e novità.</p>
+    <p class="sub">Hai un negozio, un bar, una pasticceria o distribuisci prodotti alimentari? Lascia i contatti della tua attività: ti scriviamo noi per condizioni commerciali, forniture e novità.</p>
 
     <input type="hidden" name="access_key" value="9b6ca46b-5a80-4201-93fc-f913180a5747">
-    <input type="hidden" name="subject" value="Nuova richiesta informazioni da tettedellemonache.co">
+    <input type="hidden" name="subject" value="Nuova richiesta B2B da tettedellemonache.co">
     <input type="hidden" name="from_name" value="tettedellemonache.co">
     <div class="hp" aria-hidden="true">
       <label>Non spuntare questa casella <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
@@ -291,43 +299,57 @@
 
     <div class="fields">
       <div class="field">
-        <label for="name">Nome</label>
-        <input id="name" type="text" name="name" placeholder="Nome e cognome" autocomplete="name" required>
+        <label for="name">Nome e cognome</label>
+        <input id="name" type="text" name="name" placeholder="Mario Rossi" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="company">Azienda</label>
+        <input id="company" type="text" name="azienda" placeholder="Ragione sociale o insegna" autocomplete="organization" required>
+      </div>
+      <div class="field">
+        <label for="kind">Tipo di attività</label>
+        <select id="kind" name="tipo_attivita" required>
+          <option value="">Seleziona…</option>
+          <option>Negozio / gastronomia</option>
+          <option>Bar / pasticceria</option>
+          <option>Ristorante / catering / hotel</option>
+          <option>Distributore / grossista</option>
+          <option>Grande distribuzione</option>
+          <option>Altro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="vat">Partita IVA <span class="opt">(facoltativa)</span></label>
+        <input id="vat" type="text" name="partita_iva" placeholder="IT01234567890" inputmode="text" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="ufficio@azienda.it" autocomplete="email" required>
       </div>
       <div class="field">
         <label for="phone">Telefono <span class="opt">(facoltativo)</span></label>
-        <input id="phone" type="tel" name="telefono" placeholder="333 123 4567" autocomplete="tel" inputmode="tel">
-      </div>
-      <div class="field wide">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="la-tua@email.it" autocomplete="email" required>
+        <input id="phone" type="tel" name="telefono" placeholder="080 123 4567" autocomplete="tel" inputmode="tel">
       </div>
     </div>
 
     <label class="consent">
-      <input type="checkbox" name="consenso_privacy" value="sì" required>
-      <span>Acconsento al trattamento dei miei dati per ricevere una risposta alla richiesta di informazioni.</span>
+      <input type="checkbox" name="dichiarazione_operatore" value="sì" required>
+      <span>Dichiaro di scrivere per conto di un'attività commerciale e non come consumatore privato.</span>
+    </label>
+    <label class="consent">
+      <input type="checkbox" name="presa_visione_privacy" value="sì" required>
+      <span>Ho letto l'<a href="/privacy/" target="_blank" rel="noopener">informativa privacy</a>.</span>
     </label>
 
     <button type="submit" id="send" class="submit">Invia richiesta</button>
 
-    <details>
-      <summary>Informativa privacy</summary>
-      <div>
-        <strong>Titolare del trattamento:</strong> Domenico Fraccalvieri, email: <a href="mailto:tettedellemonache@outlook.com">tettedellemonache@outlook.com</a>.<br>
-        <strong>Dati raccolti:</strong> nome, indirizzo email e, se lo inserisci, numero di telefono.<br>
-        <strong>Finalità:</strong> rispondere alla tua richiesta di informazioni. Base giuridica: il tuo consenso (art. 6.1.a GDPR).<br>
-        <strong>Conservazione:</strong> per il tempo necessario a rispondere e comunque non oltre 12 mesi.<br>
-        <strong>Destinatari:</strong> il modulo è gestito da Web3Forms, che inoltra il messaggio via email al titolare.<br>
-        <strong>I tuoi diritti:</strong> puoi chiedere in ogni momento accesso, rettifica, cancellazione o revoca del consenso scrivendo all'email del titolare, e puoi presentare reclamo al Garante per la protezione dei dati personali.
-      </div>
-    </details>
+    <p class="note">Non vendiamo direttamente ai privati: le richieste dei consumatori finali non riceveranno risposta.</p>
 
     <p class="msg" id="msg" role="status" aria-live="polite"></p>
   </form>
 </main>
 
-<footer>© <span id="y"></span> tettedellemonache.co</footer>
+<footer>© <span id="y"></span> tettedellemonache.co · Informazioni riservate a operatori professionali · <a href="/privacy/">Privacy e cookie</a></footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
@@ -360,13 +382,21 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var nameEl = document.getElementById('name');
+      var compEl = document.getElementById('company');
+      var kindEl = document.getElementById('kind');
+      var vatEl = document.getElementById('vat');
       var name = nameEl.value.trim();
       var phone = form.telefono.value.trim();
       var email = form.email.value.trim();
-      if (name.length < 2) { say('Inserisci il tuo nome.', 'err'); nameEl.focus(); return; }
-      if (phone && !/^\+?[0-9\s.\-\/()]{6,20}$/.test(phone)) { say('Il numero di telefono non sembra valido.', 'err'); form.telefono.focus(); return; }
+      var vat = vatEl.value.replace(/\s/g,'').toUpperCase();
+      if (name.length < 2) { say('Inserisci nome e cognome.', 'err'); nameEl.focus(); return; }
+      if (compEl.value.trim().length < 2) { say('Inserisci il nome dell\'azienda.', 'err'); compEl.focus(); return; }
+      if (!kindEl.value) { say('Seleziona il tipo di attività.', 'err'); kindEl.focus(); return; }
+      if (vat && !/^(IT)?[0-9]{11}$/.test(vat) && !/^[A-Z]{2}[0-9A-Z]{2,13}$/.test(vat)) { say('La partita IVA non sembra valida.', 'err'); vatEl.focus(); return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('Inserisci un indirizzo email valido.', 'err'); form.email.focus(); return; }
-      if (!form.consenso_privacy.checked) { say('Per inviare la richiesta serve il consenso al trattamento dei dati.', 'err'); return; }
+      if (phone && !/^\+?[0-9\s.\-\/()]{6,20}$/.test(phone)) { say('Il numero di telefono non sembra valido.', 'err'); form.telefono.focus(); return; }
+      if (!form.dichiarazione_operatore.checked) { say('Il modulo è riservato alle attività commerciali: conferma la dichiarazione.', 'err'); return; }
+      if (!form.presa_visione_privacy.checked) { say('Conferma di aver letto l\'informativa privacy.', 'err'); return; }
       if (form.access_key.value.indexOf('INSERISCI') === 0) { say('Il modulo non è ancora collegato: manca la access key di Web3Forms.', 'err'); return; }
 
       btn.disabled = true; say('Invio in corso…');
