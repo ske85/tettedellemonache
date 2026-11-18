@@ -31,3 +31,16 @@ html:lang(zh-Hans) body,html:lang(ja) body{line-break:strict;word-break:normal}
 
 @media (max-width:560px){.langs-float{top:10px;right:10px}.langs-float ~ main{padding-top:68px}}
 .langs .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Arabo: scrittura da destra a sinistra */
+html[dir="rtl"] body{font-family:"Instrument Sans","Geeza Pro","SF Arabic","Noto Sans Arabic","Noto Naskh Arabic","Segoe UI","Tahoma",sans-serif;line-height:1.8}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3{font-family:"Fraunces","Geeza Pro","Noto Naskh Arabic","Amiri","Times New Roman",serif;letter-spacing:0}
+html[dir="rtl"] em{font-style:normal}
+html[dir="rtl"] .eyebrow{letter-spacing:0;text-transform:none;font-size:.85rem}
+html[dir="rtl"] .langs-float{right:auto;left:14px}
+html[dir="rtl"] .langs ul{right:auto;left:0;text-align:right}
+html[dir="rtl"] .langs li a[lang]:not([lang="ar"]){direction:ltr;text-align:right}
+html[dir="rtl"] .toc ol{padding-left:0;padding-right:1.4em}
+html[dir="rtl"] ul.dots{margin:0 1.2em 14px 0}
+html[dir="rtl"] .callout{border-left:0;border-right:4px solid #c8994b;border-radius:14px 0 0 14px}
+@media (max-width:560px){html[dir="rtl"] .langs-float{left:10px;right:auto}}
