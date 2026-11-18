@@ -1,11 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tettedellemonache.co/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/en/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/fr/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/es/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/pt/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/zh/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/ja/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/"/>
   </url>
   <url>
     <loc>https://tettedellemonache.co/storia/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/en/history/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/fr/histoire/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/es/historia/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/pt/historia/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/zh/history/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/ja/history/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tettedellemonache.co/storia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tettedellemonache.co/en/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tettedellemonache.co/fr/histoire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tettedellemonache.co/es/historia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tettedellemonache.co/pt/historia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tettedellemonache.co/zh/history/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tettedellemonache.co/ja/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tettedellemonache.co/storia/"/>
+  </url>
+  <url>
+    <loc>https://tettedellemonache.co/privacy/</loc>
+    <lastmod>2026-11-18</lastmod>
   </url>
 </urlset>

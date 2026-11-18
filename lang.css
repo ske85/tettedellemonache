@@ -1,0 +1,33 @@
+/* Selettore della lingua */
+.langs{position:relative;z-index:20;margin:0;font-family:"Instrument Sans",system-ui,sans-serif;font-size:.85rem;line-height:1.3;color:#4a3424}
+.langs summary,.langs a{text-decoration:none!important}
+.langs-float{position:absolute;top:14px;right:14px}
+.langs summary{
+  list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  padding:7px 12px;border-radius:999px;color:#4a3424;font-weight:600;
+  background:rgba(255,255,255,.75);border:1px solid rgba(42,28,19,.14);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+}
+.langs summary::-webkit-details-marker{display:none}
+.langs summary:hover,.langs[open] summary{background:#fff}
+.langs summary:focus-visible{outline:2px solid #c8994b;outline-offset:2px}
+.langs ul{
+  position:absolute;right:0;top:calc(100% + 6px);min-width:160px;list-style:none;margin:0;padding:6px;
+  background:#fff;border:1px solid rgba(42,28,19,.12);border-radius:14px;
+  box-shadow:0 12px 30px -12px rgba(42,28,19,.35);text-align:left;
+}
+.langs li a{display:block;padding:8px 12px;border-radius:9px;color:#2a1c13;text-decoration:none}
+.langs li a:hover{background:#f5efe4}
+.langs li a[aria-current="page"]{font-weight:600;background:rgba(233,201,126,.3)}
+
+/* Cinese e giapponese: caratteri di sistema adatti e niente corsivo finto */
+html:lang(zh-Hans) body{font-family:"Instrument Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",sans-serif}
+html:lang(ja) body{font-family:"Instrument Sans","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif}
+html:lang(zh-Hans) h1,html:lang(zh-Hans) h2,html:lang(zh-Hans) h3,html:lang(zh-Hans) .brand{font-family:"Fraunces","Songti SC","Noto Serif CJK SC","Source Han Serif SC",serif}
+html:lang(ja) h1,html:lang(ja) h2,html:lang(ja) h3,html:lang(ja) .brand{font-family:"Fraunces","Hiragino Mincho ProN","Noto Serif CJK JP","Yu Mincho",serif}
+html:lang(zh-Hans) em,html:lang(ja) em{font-style:normal}
+html:lang(zh-Hans) .eyebrow,html:lang(ja) .eyebrow{letter-spacing:.12em}
+html:lang(zh-Hans) body,html:lang(ja) body{line-break:strict;word-break:normal}
+
+@media (max-width:560px){.langs-float{top:10px;right:10px}.langs-float ~ main{padding-top:68px}}
+.langs .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
