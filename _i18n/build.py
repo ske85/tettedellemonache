@@ -42,7 +42,7 @@ LANGS = [
     ("pt", "pt-PT",   "pt_PT", "pt-PT",   "pt",      "Português", "PT",   NB_SITE, "/pt/", "/pt/historia/"),
     ("zh", "zh-Hans", "zh_CN", "zh-Hans", "zh-Hans", "简体中文",   "中文", NB_SITE, "/zh/", "/zh/history/"),
     ("ja", "ja",      "ja_JP", "ja-JP",   "ja",      "日本語",     "日本語", NB_SITE, "/ja/", "/ja/history/"),
-    ("ar", "ar",      "ar_AE", "ar",      "ar",      "العربية",   "عربي", NB_SITE, "/ar/", "/ar/history/"),
+    ("ms", "ms",      "ms_MY", "ms-MY",   "ms",      "Bahasa Melayu", "BM", NB_SITE, "/ms/", "/ms/sejarah/"),
 ]
 BY = {l[0]: l for l in LANGS}
 PAGES = {"home": 8, "storia": 9}
@@ -59,11 +59,13 @@ SW_A, SW_B = "<!-- i18n:switch -->", "<!-- /i18n:switch -->"
 GLOBE = ('<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" '
          'stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/></svg>')
 LABEL = {"it": "Lingua", "en": "Language", "us": "Language", "fr": "Langue", "es": "Idioma", "pt": "Idioma",
-         "zh": "语言", "ja": "言語", "ar": "اللغة"}
-RTL = {"ar"}
+         "zh": "语言", "ja": "言語", "ms": "Bahasa"}
+RTL = set()   # lingue scritte da destra a sinistra (nessuna al momento)
+# indicazioni hreflang in più: Singapore e Malesia usano l'inglese britannico
+EXTRA_HREFLANG = {"en": ["en-SG", "en-MY"]}
 # nomi alternativi nei dati strutturati, per le lingue che ne vogliono una versione diversa
 ALT_NAMES = {
-    "ar": '["Sospiri", "Sospiri pugliesi", "Sospiri di Altamura", "Sise delle monache", "حلوى راهبات ألتامورا"]',
+    "ms": '["Sospiri", "Sospiri pugliesi", "Sospiri di Altamura", "Sise delle monache", "Pastri biarawati Altamura"]',
 }
 
 
@@ -91,7 +93,10 @@ def strip_blocks(html):
 
 
 def head_block(page):
-    links = [f'<link rel="alternate" hreflang="{l[4]}" href="{url(l[0], page)}">' for l in LANGS]
+    links = []
+    for l in LANGS:
+        for h in [l[4]] + EXTRA_HREFLANG.get(l[0], []):
+            links.append(f'<link rel="alternate" hreflang="{h}" href="{url(l[0], page)}">')
     links.append(f'<link rel="alternate" hreflang="x-default" href="{url(X_DEFAULT, page)}">')
     links.append('<link rel="stylesheet" href="/lang.css">')
     return HEAD_A + "\n" + "\n".join(links) + "\n" + HEAD_B
@@ -175,7 +180,8 @@ def sitemap(codes, extra=()):
         for c in codes:
             out += ["  <url>", f"    <loc>{url(c, page)}</loc>", f"    <lastmod>{TODAY}</lastmod>"]
             for a in LANGS:
-                out.append(f'    <xhtml:link rel="alternate" hreflang="{a[4]}" href="{url(a[0], page)}"/>')
+                for h in [a[4]] + EXTRA_HREFLANG.get(a[0], []):
+                    out.append(f'    <xhtml:link rel="alternate" hreflang="{h}" href="{url(a[0], page)}"/>')
             out.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url(X_DEFAULT, page)}"/>')
             out.append("  </url>")
     for u in extra:
