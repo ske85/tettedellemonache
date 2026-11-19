@@ -42,6 +42,7 @@ LANGS = [
     ("pt", "pt-PT",   "pt_PT", "pt-PT",   "pt",      "Português", "PT",   NB_SITE, "/pt/", "/pt/historia/"),
     ("zh", "zh-Hans", "zh_CN", "zh-Hans", "zh-Hans", "简体中文",   "中文", NB_SITE, "/zh/", "/zh/history/"),
     ("ja", "ja",      "ja_JP", "ja-JP",   "ja",      "日本語",     "日本語", NB_SITE, "/ja/", "/ja/history/"),
+    ("ko", "ko",      "ko_KR", "ko-KR",   "ko",      "한국어",     "한국어", NB_SITE, "/ko/", "/ko/history/"),
     ("ms", "ms",      "ms_MY", "ms-MY",   "ms",      "Bahasa Melayu", "BM", NB_SITE, "/ms/", "/ms/sejarah/"),
 ]
 BY = {l[0]: l for l in LANGS}
@@ -59,7 +60,7 @@ SW_A, SW_B = "<!-- i18n:switch -->", "<!-- /i18n:switch -->"
 GLOBE = ('<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" '
          'stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/></svg>')
 LABEL = {"it": "Lingua", "en": "Language", "us": "Language", "fr": "Langue", "es": "Idioma", "pt": "Idioma",
-         "zh": "语言", "ja": "言語", "ms": "Bahasa"}
+         "zh": "语言", "ja": "言語", "ko": "언어", "ms": "Bahasa"}
 RTL = set()   # lingue scritte da destra a sinistra (nessuna al momento)
 # indicazioni hreflang in più: Singapore e Malesia usano l'inglese britannico
 EXTRA_HREFLANG = {"en": ["en-SG", "en-MY"]}

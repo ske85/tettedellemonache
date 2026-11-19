@@ -25,7 +25,9 @@ html:lang(zh-Hans) body{font-family:"Instrument Sans","PingFang SC","Hiragino Sa
 html:lang(ja) body{font-family:"Instrument Sans","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans CJK JP","Yu Gothic","Meiryo",sans-serif}
 html:lang(zh-Hans) h1,html:lang(zh-Hans) h2,html:lang(zh-Hans) h3,html:lang(zh-Hans) .brand{font-family:"Fraunces","Songti SC","Noto Serif CJK SC","Source Han Serif SC",serif}
 html:lang(ja) h1,html:lang(ja) h2,html:lang(ja) h3,html:lang(ja) .brand{font-family:"Fraunces","Hiragino Mincho ProN","Noto Serif CJK JP","Yu Mincho",serif}
-html:lang(zh-Hans) em,html:lang(ja) em{font-style:normal}
+html:lang(ko) body{font-family:"Instrument Sans","Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR","Malgun Gothic",sans-serif;word-break:keep-all}
+html:lang(ko) h1,html:lang(ko) h2,html:lang(ko) h3,html:lang(ko) .brand{font-family:"Fraunces","AppleMyungjo","Noto Serif CJK KR","Noto Serif KR","Batang",serif}
+html:lang(zh-Hans) em,html:lang(ja) em,html:lang(ko) em{font-style:normal}
 html:lang(zh-Hans) .eyebrow,html:lang(ja) .eyebrow{letter-spacing:.12em}
 html:lang(zh-Hans) body,html:lang(ja) body{line-break:strict;word-break:normal}
 
